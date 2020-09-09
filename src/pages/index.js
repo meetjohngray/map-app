@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import L from 'leaflet';
+import { omnivore } from '@mapbox/leaflet-omnivore'
 // import { Marker } from 'react-leaflet';
 
 // import { promiseToFlyTo, getCurrentLocation } from 'lib/map';
@@ -49,6 +50,12 @@ const IndexPage = () => {
 
     leafletElement.fitBounds(bounds);
   }
+
+//   const runLayer = omnivore.gpx('./camino.gpx')
+//   runLayer.addTo(leafletElement)
+//   const bounds = runLayer.getBounds()
+
+// leafletElement.fitBounds(bounds)
   
   const mapSettings = {
     center: CENTER,
@@ -65,12 +72,12 @@ const IndexPage = () => {
 
       <Map {...mapSettings} />
 
-      {/* <Container type="content" className="text-center home-start">
-        <h2>Still Getting Started?</h2>
-        <p>Run the following in your terminal!</p>
-        <Snippet>gatsby new [directory] https://github.com/colbyfayock/gatsby-starter-leaflet</Snippet>
-        <p className="note">Note: Gatsby CLI required globally for the above command</p> */}
-      {/* </Container> */}
+      <Container type="content" className="text-center home-start">
+        <h2>Buen Camino!</h2>
+        {/* <p>Run the following in your terminal!</p> */}
+        {/* <Snippet>gatsby new [directory] https://github.com/colbyfayock/gatsby-starter-leaflet</Snippet> */}
+        {/* <p className="note">Note: Gatsby CLI required globally for the above command</p> */}
+      </Container>
     </Layout>
   );
 };

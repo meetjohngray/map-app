@@ -13,7 +13,7 @@ const Header = () => {
     <header>
       <Container type="content">
         <p>
-          <Link to="/">{ companyName }</Link>
+          <Link to="/">El Camino de Santiago</Link>
         </p>
         <ul>
           <li>
